@@ -47,13 +47,24 @@ _(Fill in: Python / pandas / Excel / SQL / Power BI, etc.)_
 ```
 quick-commerce-delivery-analysis/
 ├── data/
-│   ├── raw/            # original CSV (not modified)
-│   └── cleaned/        # cleaned output
-├── notebooks/          # analysis notebooks
-├── visuals/            # charts used in the report
-├── report/             # final write-up or slides
+│   ├── raw/
+│   │   └── ecommerce_delivery_analytics.csv  # source data; never edit
+│   └── cleaned/
+│       └── orders_cleaned.csv                # generated in Step 3
+├── notebooks/
+│   ├── 01_data_understanding.ipynb
+│   ├── 02_data_cleaning.ipynb
+│   ├── 03_eda.ipynb
+│   └── 04_insights.ipynb
+├── visuals/                                     # PNG charts for the report
+├── report/
+│   └── final_report.md
 └── README.md
 ```
+
+The source CSV is kept at the repository root for compatibility and copied
+unchanged to `data/raw/` as the canonical analysis input. Generate
+`data/cleaned/orders_cleaned.csv` from the data-cleaning notebook in Step 3.
 
 ## Data Quality Notes
 
